@@ -29,13 +29,14 @@ const Wrapper = styled.div`
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
   background-color: ${COLORS.transparentGray15};
   width: 370px;
+  overflow: hidden;
 `;
 
 const Bar = styled.div`
   width: ${(props) => (props.value > 100 ? 100 : props.value)}%;
   background-color: ${COLORS.primary};
   height: 100%;
-  border-radius: ${(props) => (props.value * 8) / 100}px;
+  border-radius: 4px ${(props) => (props.value * 8) / 100}px 4px;
 `;
 const ProgressBar = ({ value, size }) => {
   const style = sizes[size];
